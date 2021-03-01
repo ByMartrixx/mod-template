@@ -1,4 +1,4 @@
-package io.github.bymartrixx.templatemodpkg;
+package me.bymartrixx.templatemodpkg;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;

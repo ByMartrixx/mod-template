@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.bymartrixx.templatemodpkg.TemplateModClass"
+      "me.bymartrixx.templatemodpkg.TemplateModClass"
     ]
   },
   "mixins": [
