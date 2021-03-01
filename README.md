@@ -27,9 +27,9 @@ commands:
   - delete:
       line: 1
 
-  # Erase lines from 7 to 13 if mod is using bintray, else delete the lines
+  # Erase lines from 7 to 13 if mod is using modrinth, else delete the lines
   - erase:
-      if: b
+      if: m
       else: delete
       line: [7, 13]
 
@@ -56,7 +56,6 @@ run:
 
 ## Conditions
 Most of the conditions are if the mod uses the option.
-- Bintray - `b`
 - Curseforge - `cf`
 - Github actions - `gh`
 - Modrinth - `m`
