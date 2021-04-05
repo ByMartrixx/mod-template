@@ -21,5 +21,6 @@ commands:
       name: Setup jdk ${{ matrix.java }}\n        uses: actions/setup-java@v1\n        with:\n          java-version:
       ${{ matrix.java }}\n\n      - name: Make gradle wrapper executable\n        run: chmod +x gradlew\n\n      -
       name: Build\n        run: ./gradlew build\n\n      - name: Upload Artifacts\n        uses:
-      actions/upload-artifact@v2\n        if: success()\n        with:\n          name: Built mod on JDK
-      ${{ matrix.java }}\n          path: build/libs/*.jar\n"
+      actions/upload-artifact@v2\n#        Only upload artifacts once\n        if:
+      ${{ success() && matrix.java == '11' }}\n        with:\n          name:
+      Built mod on JDK ${{ matrix.java }}\n          path: build/libs/*.jar\n"
