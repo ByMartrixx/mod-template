@@ -15,18 +15,6 @@ public class TemplateModClass implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		log(Level.INFO, "Initializing {} version {}...", MOD_NAME, VERSION);
-
 		// TODO: Mod Initializer
-
-		log(Level.INFO, "Initialized {} version {}", MOD_NAME, VERSION);
-	}
-
-	public static void log(Level level, String message, Object ... fields) {
-		LOGGER.log(level, "[" + MOD_NAME + "] " + message, fields);
-	}
-
-	public static void log(Level level, String message) {
-		log(level, message, (Object) null);
 	}
 }
