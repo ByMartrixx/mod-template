@@ -3,5 +3,9 @@ action: move
 from: src/main/java/me/bymartrixx/templatemodpkg/TemplateModClass.java
 
 commands:
-  - do_nothing:
-      line: -1
+  - placeholder:
+      line: 1
+      count: 1
+  - placeholder:
+      line: 7
+      count: 1
