@@ -298,6 +298,10 @@ def runTpl(templateFile: TextIOWrapper):
             print(f"{sourceFilePath} => {filePath}")
             if not DEBUG_MODE:
                 os.rename(sourceFilePath, filePath)
+                # Remove empty folders after moving
+                sourceFileFolder = sourceFilePath[:sourceFilePath.rfind('/')]
+                if not os.listdir(sourceFileFolder):
+                    os.rmdir(sourceFileFolder)
             else:
                 # Direct to source file to avoid FileNotFoundError because the file wasn't moved/created
                 filePath = sourceFilePath
